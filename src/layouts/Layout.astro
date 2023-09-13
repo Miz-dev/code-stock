@@ -1,58 +1,106 @@
 ---
-import '../scss/global.scss'
+import Sidenav from '../components/Sidenav.astro';
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <Sidenav />
+      <slot />
+    </div>
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		/* background: #13151a; */
-		background-size: 224px;
-	}
 
-	a {
-    	color: #274a78;
-    	text-decoration: none;
-  	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+<style is:global>
+  :root {
+    --accent: 25, 47, 96;
+    --accent-light: 187, 200, 230;
+    --accent-dark: 15, 35, 80;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  * {
+    box-sizing: inherit;
+  }
+
+  *:lang(en) {
+    font-family: sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-feature-settings: 'palt';
+    letter-spacing: 0.08em;
+    color: #333;
+    background-color: #e7f3ff;
+    box-sizing: border-box;
+  }
+
+  /* body.no_scroll{
+		overflow: hidden;
+	} */
+
+  main {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px 4px rgba(119, 119, 119, 0.1);
+    /* flex: 1; */
+    width: calc(100% - 330px);
+    height: 900px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: #274a78;
+    text-decoration: none;
+  }
+
+  mark {
+    background-color: transparent;
+    color: $main;
+    font-style: inherit;
+    font-weight: bold;
+  }
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    /* column-gap: 2rem; */
+    max-width: 1200px;
+    margin: auto;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 </style>
