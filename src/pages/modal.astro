@@ -3,156 +3,152 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Modal | Code Stock">
-  <main>
-    <h1><span class="text-gradient">Modal</span></h1>
-    <button id="open-modal" type="button">Open modal</button>
+	<main>
+		<h1><span class="text-gradient">Modal</span></h1>
+		<button id="open-modal" type="button">Open modal</button>
 
-    <dialog id="modal">
-      <h3 class="modal-header">modal dialog</h3>
-      <div class="modal-body">
-        <p>テキストテキストテキスト</p>
-      </div>
-      <button id="close" class="close" type="button">&times;</button>
-    </dialog>
-  </main>
+		<dialog id="modal">
+			<h3 class="modal-header">modal dialog</h3>
+			<div class="modal-body">
+				<p>テキストテキストテキスト</p>
+			</div>
+			<button id="close" class="close" type="button">&times;</button>
+		</dialog>
+	</main>
 </Layout>
 
 <script>
-  const modal = document.getElementById('modal');
-  const open = document.getElementById('open-modal');
-  const close = document.getElementById('close');
+	const modal = document.getElementById('modal');
+	const open = document.getElementById('open-modal');
+	const close = document.getElementById('close');
 
-  open.addEventListener('click', () => {
-    modal.showModal();
-  });
+	open.addEventListener('click', () => {
+		modal.showModal();
+	});
 
-  close.addEventListener('click', () => {
-    modal.close('cancelled');
-  });
+	close.addEventListener('click', () => {
+		modal.close('cancelled');
+	});
 
-  modal.addEventListener('cancel', () => {
-    modal.close('cancelled');
-  });
+	modal.addEventListener('cancel', () => {
+		modal.close('cancelled');
+	});
 
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      modal.close('cancelled');
-    }
-  });
+	modal.addEventListener('click', (event) => {
+		if (event.target === modal) {
+			modal.close('cancelled');
+		}
+	});
 </script>
 
 <style lang="scss">
-  main {
-    // margin: auto;
-    // width: 800px;
-    // max-width: calc(100% - 2rem);
-    color: #333;
-    font-size: 20px;
-    line-height: 1.6;
-    padding: 2rem;
-  }
+	main {
+		color: #333;
+		font-size: 20px;
+		line-height: 1.6;
+		padding: 2rem;
+	}
 
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
 
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 1em;
-  }
+	h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
 
-  .text-gradient {
-    position: relative;
-    color: rgba(0 0 0 / 0);
-    background-size: 400%;
-    background-position: 0%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: linear-gradient(
-      23deg,
-      #a3e5b5,
-      #225489,
-      #359dd8,
-      #52a6ad
-    );
-    background-repeat: no-repeat;
-    animation: archivecopy 7s ease infinite;
-  }
+	.text-gradient {
+		position: relative;
+		color: rgba(0 0 0 / 0);
+		background-size: 400%;
+		background-position: 0%;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: linear-gradient(
+			23deg,
+			#a3e5b5,
+			#225489,
+			#359dd8,
+			#52a6ad
+		);
+		background-repeat: no-repeat;
+		animation: archivecopy 7s ease infinite;
+	}
 
-  @keyframes archivecopy {
-    0% {
-      background-position: 0 50%;
-    }
+	@keyframes archivecopy {
+		0% {
+			background-position: 0 50%;
+		}
 
-    25% {
-      background-position: 100% 50%;
-    }
-    50% {
-      background-position: 50% 100%;
-    }
-    50% {
-      background-position: 0 100%;
-    }
-    100% {
-      background-position: 0 50%;
-    }
-  }
+		25% {
+			background-position: 100% 50%;
+		}
+		50% {
+			background-position: 50% 100%;
+		}
+		50% {
+			background-position: 0 100%;
+		}
+		100% {
+			background-position: 0 50%;
+		}
+	}
 
-  dialog {
-    padding: 0;
-	margin: auto;
-    border: 0;
-    border-radius: 20px;
-  }
+	dialog {
+		padding: 0;
+		margin: auto;
+		border: 0;
+		border-radius: 20px;
+	}
 
-  /* native backdrop */
-  dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+	/* native backdrop */
+	dialog::backdrop {
+		background-color: rgba(0, 0, 0, 0.4);
+	}
 
-  dialog[open] {
-    animation: slide-up 0.4s ease-out;
-  }
+	dialog[open] {
+		animation: slide-up 0.4s ease-out;
+	}
 
-  /* prettying things up a bit */
-  .close {
-    position: absolute;
-    top: 0.2em;
-    right: 0.2em;
-    padding: 0.3em;
-    line-height: 0.6;
-    background-color: transparent;
-    border: 0;
-    font-size: 2em;
-    cursor: pointer;
-  }
+	/* prettying things up a bit */
+	.close {
+		position: absolute;
+		top: 0.2em;
+		right: 0.2em;
+		padding: 0.3em;
+		line-height: 0.6;
+		background-color: transparent;
+		border: 0;
+		font-size: 2em;
+		cursor: pointer;
+	}
 
-  .modal-header,
-  .modal-body {
-    padding: 1em;
-  }
+	.modal-header,
+	.modal-body {
+		padding: 1em;
+	}
 
-  .modal-header {
-    margin: 0;
-    padding-bottom: 0.6em;
-    background-color: #5383c3;
-    border-top-left-radius: 0.6rem;
-    border-top-right-radius: 0.6rem;
-    border-bottom: 1px solid #274a78;
-  }
+	.modal-header {
+		margin: 0;
+		padding-bottom: 0.6em;
+		background-color: #5383c3;
+		border-top-left-radius: 0.6rem;
+		border-top-right-radius: 0.6rem;
+		border-bottom: 1px solid #274a78;
+	}
 
-  button {
-    padding: 0.4em 1em 0.2em;
-    // font-family: Glober, Helvetica, sans-serif;
-    cursor: pointer;
-  }
+	button {
+		padding: 0.4em 1em 0.2em;
+		cursor: pointer;
+	}
 </style>
