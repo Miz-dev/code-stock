@@ -1,0 +1,29 @@
+// @use './global/index' as *;
+@use './_reset.scss';
+
+
+/**
+* Foundation
+* ========================== */
+// @use 'foundation/_reset.scss';
+// @use 'foundation/_base.scss';
+// @use 'foundation/_keyframes.scss';
+
+/**
+* import
+* ========================== */
+// @use 'import/splide.css';
+
+/* Object
+* ========================== */
+/* Component ------------ */
+// @use 'object/layout/**/*.scss';
+
+/* Component ------------ */
+// @use 'object/component/**/*.scss';
+
+/* Project ------------ */
+// @use 'object/project/**/*.scss';
+
+/* Utility ------------ */
+// @use 'object/utility/*.scss';
