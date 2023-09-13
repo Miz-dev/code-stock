@@ -1,0 +1,244 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Link | Code Stock">
+  <main>
+    <h1><span class="text-gradient">Link</span></h1>
+
+    <ul>
+      <li>
+        <a href="#" class="link__button">
+          リンクテキスト
+          <div class="link__icon">
+            <img src="/icon_button.svg" alt="" width="18" height="18" />
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="p-under-bottom-text-link"> リンクテキスト</a>
+      </li>
+      <li>
+        <span class="textlink textlink01">
+          <a href="#">リンクテキスト</a>
+        </span>
+      </li>
+      <li>
+        <span class="textlink textlink02">
+          <a href="#">リンクテキスト</a>
+        </span>
+      </li>
+    </ul>
+  </main>
+</Layout>
+
+<style lang="scss">
+  main {
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 2rem;
+  }
+  .astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    position: relative;
+    color: rgba(0 0 0 / 0);
+    background-size: 400%;
+    background-position: 0%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(
+      23deg,
+      #a3e5b5,
+      #225489,
+      #359dd8,
+      #52a6ad
+    );
+    background-repeat: no-repeat;
+    animation: archivecopy 7s ease infinite;
+  }
+
+  @keyframes archivecopy {
+    0% {
+      background-position: 0 50%;
+    }
+
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    50% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .link__button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 15px;
+    line-height: 1.4666666667;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    color: #274a78;
+    width: fit-content;
+    padding-bottom: 4px;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #5383c3;
+
+      & > .link__icon {
+        transform: rotate(180deg);
+        background-color: #5383c3;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #274a78;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .link__icon {
+    display: block;
+    background-color: #274a78;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+  }
+
+  .p-under-bottom-text-link {
+    position: relative;
+    opacity: 1;
+    color: #274a78;
+    font-size: 15px;
+    line-height: 1.4666666667;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    padding-bottom: 5px;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #274a78;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &:before {
+          @keyframes buttonPrimary {
+            0% {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+            45% {
+              transform-origin: right;
+              transform: scaleX(0);
+            }
+            56% {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+            100% {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+          }
+          animation: buttonPrimary 0.4s 0s ease;
+        }
+      }
+    }
+  }
+
+  .textlink a {
+    position: relative;
+    // color: #333;
+    font-size: 15px;
+    line-height: 1.4666666667;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .textlink a:hover {
+    color: #274a78;
+  }
+
+  .textlink01 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #274a78;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .textlink01 a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .textlink02 a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #274a78;
+    transition: width 0.3s;
+  }
+
+  .textlink02 a:hover::after {
+    width: 100%;
+  }
+</style>
