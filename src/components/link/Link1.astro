@@ -1,0 +1,64 @@
+---
+
+---
+<a href="#" class="textlink__button">
+	リンクテキスト
+	<div class="textlink__icon">
+		<img src="/icon_button.svg" alt="" width="18" height="18" />
+	</div>
+</a>
+
+
+<style lang="scss">
+	.textlink__button {
+		position: relative;
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+		font-size: 15px;
+		line-height: 1.4666666667;
+		letter-spacing: 0.08em;
+		font-weight: bold;
+		color: #274a78;
+		width: fit-content;
+		padding-bottom: 4px;
+		border-left: none;
+		cursor: pointer;
+		margin-top: 12px;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: #5383c3;
+
+			& > .textlink__icon {
+				transform: rotate(180deg);
+				background-color: #5383c3;
+			}
+
+			&:before {
+				opacity: 0;
+			}
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			background-color: #274a78;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			transition: all 0.3s ease;
+		}
+	}
+
+	.textlink__icon {
+		display: block;
+		background-color: #274a78;
+		border-radius: 50%;
+		width: 18px;
+		height: 18px;
+		transition: transform 0.3s ease;
+	}
+</style>

@@ -1,0 +1,39 @@
+---
+
+---
+<span class="textlink">
+	<a href="#">リンクテキスト</a>
+</span>
+
+
+<style lang="scss">
+	.textlink  {
+		a {
+			position: relative;
+			font-size: 15px;
+			line-height: 1.4666666667;
+			letter-spacing: 0.08em;
+			font-weight: bold;
+			text-decoration: none;
+
+			&:hover {
+				color: #274a78;
+
+				&::after {
+					width: 100%;
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background-color: #274a78;
+				transition: width 0.3s;
+			}
+		}
+	}
+</style>
