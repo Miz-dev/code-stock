@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Modal | Code Stock">
+	<main>
+		<h1><span class="text-gradient">Swiper</span></h1>
+		<!-- Slider main container -->
+		<div class="swiper">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<img src="https://source.unsplash.com/qCrKTET_09o" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="https://source.unsplash.com/_hjsopbklZ0" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="https://source.unsplash.com/hQBIJsBtyBw" alt=""/>
+				</div>
+			</div>
+
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
+
+			<!-- If we need navigation buttons -->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+
+			<!-- If we need scrollbar -->
+			<div class="swiper-scrollbar"></div>
+		</div>
+	</main>
+</Layout>
+
+<!-- CDN JS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- CDN CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+        var mySwiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    });
+</script>
+
+<style lang="scss">
+	// .swiper {
+	// 	width: 600px;
+	// 	height: 300px;
+	// }
+</style>
