@@ -1,0 +1,29 @@
+---
+
+---
+
+<h2 class="heading" data-number="03">数字と線を組み合わせた見出しデザイン03</h2>
+
+<style lang="scss">
+	.heading {
+		position: relative;
+		font-size: 26px;
+
+		&::before {
+			content: attr(data-number);
+			display: block;
+			color: #d8be39;
+			font-size: 30px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 1px;
+			background-color: #d8be39;
+		}
+	}
+</style>

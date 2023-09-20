@@ -1,0 +1,26 @@
+---
+
+---
+
+<h2 class="heading" data-en="Recruit">線と英字を組み合わせた見出しデザイン02</h2>
+
+<style lang="scss">
+	.heading {
+		font-size: 26px;
+
+		&::before {
+			content: attr(data-en);
+			display: block;
+			color: #498ee0;
+			font-size: 18px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 40px;
+			height: 1px;
+			background-color: #498ee0;
+		}
+	}
+</style>

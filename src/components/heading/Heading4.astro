@@ -1,0 +1,33 @@
+---
+
+---
+
+<h2 class="heading">吹き出しのCSS見出しデザイン</h2>
+
+<style lang="scss">
+	.heading {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 26px;
+		text-align: center;
+
+		&::before,
+		&::after {
+			content: '';
+			width: 3px;
+			height: 40px;
+			background-color: #3fc1c9;
+		}
+
+		&::before {
+			margin-right: 30px;
+			transform: rotate(-35deg)
+		}
+
+		&::after {
+			margin-left: 30px;
+			transform: rotate(35deg)
+		}
+	}
+</style>
