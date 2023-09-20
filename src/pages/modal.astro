@@ -43,10 +43,10 @@ import Layout from '../layouts/Layout.astro';
 
 <style lang="scss">
 	dialog {
-		padding: 0;
+		padding: 20px;
 		margin: auto;
 		border: 0;
-		border-radius: 20px;
+		border-radius: 8px;
 	}
 
 	/* native backdrop */
@@ -71,22 +71,14 @@ import Layout from '../layouts/Layout.astro';
 		cursor: pointer;
 	}
 
-	.modal-header,
-	.modal-body {
-		padding: 1em;
-	}
-
 	.modal-header {
 		margin: 0;
-		padding-bottom: 0.6em;
-		background-color: #5383c3;
-		border-top-left-radius: 0.6rem;
-		border-top-right-radius: 0.6rem;
-		border-bottom: 1px solid #274a78;
+	}
+
+	.modal-body {
 	}
 
 	button {
-		padding: 0.4em 1em 0.2em;
 		cursor: pointer;
 	}
 </style>
