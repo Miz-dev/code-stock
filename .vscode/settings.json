@@ -5,5 +5,9 @@
   "editor.formatOnType": true,
   "editor.quickSuggestions": { "strings": true },
   "files.encoding": "utf8",
-  "bookmarks.useWorkaroundForFormatters": true
+  "bookmarks.useWorkaroundForFormatters": true,
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
