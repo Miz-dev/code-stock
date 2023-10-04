@@ -1,66 +1,71 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Code Stock">
-	<main>
-		<h1><span class="text-gradient">Home</span></h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/heading/"
-				title="見出し"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="/link/"
-				title="リンク"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="/modal/"
-				title="モーダル"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="/splide/"
-				title="Splide"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="/swiper/"
-				title="Swiper"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="/card-hover-interactions/"
-				title="Card Hover Interactions"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="/button-animation/"
-				title="Animation Buttons"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="/line-animation/"
-				title="Line Animation"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-			<Card
-				href="/nth/"
-				title="nth"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+  <main>
+    <h1><span class="text-gradient">Home</span></h1>
+    <ul role="list" class="link-card-grid">
+      <Card
+        href="/heading/"
+        title="見出し"
+        body="Learn how Astro works and explore the official API docs."
+      />
+      <Card
+        href="/link/"
+        title="リンク"
+        body="Learn how Astro works and explore the official API docs."
+      />
+      <Card
+        href="/modal/"
+        title="モーダル"
+        body="Supercharge your project with new frameworks and libraries."
+      />
+      <Card
+        href="/splide/"
+        title="Splide"
+        body="Explore a galaxy of community-built starter themes."
+      />
+      <Card
+        href="/swiper/"
+        title="Swiper"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+      <Card
+        href="/card-hover-interactions/"
+        title="Card Hover Interactions"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+      <Card
+        href="/button-animation/"
+        title="Animation Buttons"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+      <Card
+        href="/line-animation/"
+        title="Line Animation"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+      <Card
+        href="/nth/"
+        title="nth"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+      <Card
+        href="/growing-dropdown/"
+        title="Growing Dropdown"
+        body="Come say hi to our amazing Discord community. ❤️"
+      />
+    </ul>
+  </main>
 </Layout>
 
 <style>
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
+  }
 </style>
