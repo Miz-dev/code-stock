@@ -5,29 +5,29 @@
 <h2 class="heading" data-number="04">数字と線を組み合わせた見出しデザイン04</h2>
 
 <style lang="scss">
-	.heading {
-		position: relative;
-		padding-left: 60px;
-		font-size: 26px;
+  .heading {
+    position: relative;
+    padding-left: 60px;
+    font-size: 26px;
 
-		&::before {
-			content: attr(data-number);
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-			color: rgba(63,193,201,0.3);
-			font-size: 50px;
-		}
+    &::before {
+      content: attr(data-number);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: rgba(63, 193, 201, 0.3);
+      font-size: 50px;
+    }
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100px;
-			height: 1px;
-			background-color: rgba(63,193,201,1);
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 1px;
+      background-color: rgba(63, 193, 201, 1);
+    }
+  }
 </style>

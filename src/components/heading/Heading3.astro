@@ -5,27 +5,27 @@
 <h2 class="heading">左右に線を配置したCSS見出しデザイン</h2>
 
 <style lang="scss">
-	.heading {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 26px;
-		text-align: center;
+  .heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    text-align: center;
 
-		&::before,
-		&::after {
-			content: '';
-			width: 70px;
-			height: 3px;
-			background-color: #e3bf00;
-		}
+    &::before,
+    &::after {
+      content: "";
+      width: 70px;
+      height: 3px;
+      background-color: #e3bf00;
+    }
 
-		&::before {
-			margin-right: 20px;
-		}
+    &::before {
+      margin-right: 20px;
+    }
 
-		&::after {
-			margin-left: 20px;
-		}
-	}
+    &::after {
+      margin-left: 20px;
+    }
+  }
 </style>

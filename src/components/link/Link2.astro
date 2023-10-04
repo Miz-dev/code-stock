@@ -1,57 +1,55 @@
 ---
 
 ---
-<a href="#" class="textlink">
-	リンクテキスト
-</a>
 
+<a href="#" class="textlink"> リンクテキスト</a>
 
 <style lang="scss">
-	.textlink {
-		position: relative;
-		opacity: 1;
-		color: #274a78;
-		font-size: 15px;
-		line-height: 1.4666666667;
-		letter-spacing: 0.08em;
-		font-weight: bold;
-		padding-bottom: 5px;
+  .textlink {
+    position: relative;
+    opacity: 1;
+    color: #274a78;
+    font-size: 15px;
+    line-height: 1.4666666667;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    padding-bottom: 5px;
 
-		&:before {
-			content: '';
-			display: block;
-			height: 1px;
-			width: 100%;
-			background-color: #274a78;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-		}
+    &:before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: #274a78;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
 
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				&:before {
-					@keyframes buttonPrimary {
-						0% {
-							transform: scaleX(1);
-							transform-origin: right;
-						}
-						45% {
-							transform-origin: right;
-							transform: scaleX(0);
-						}
-						56% {
-							transform-origin: left;
-							transform: scaleX(0);
-						}
-						100% {
-							transform-origin: left;
-							transform: scaleX(1);
-						}
-					}
-					animation: buttonPrimary 0.4s 0s ease;
-				}
-			}
-		}
-	}
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        &:before {
+          @keyframes buttonPrimary {
+            0% {
+              transform: scaleX(1);
+              transform-origin: right;
+            }
+            45% {
+              transform-origin: right;
+              transform: scaleX(0);
+            }
+            56% {
+              transform-origin: left;
+              transform: scaleX(0);
+            }
+            100% {
+              transform-origin: left;
+              transform: scaleX(1);
+            }
+          }
+          animation: buttonPrimary 0.4s 0s ease;
+        }
+      }
+    }
+  }
 </style>

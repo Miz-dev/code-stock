@@ -5,21 +5,21 @@
 <h2 class="heading">2色を重ねた線とCSS見出しデザイン</h2>
 
 <style lang="scss">
-	.heading {
-		position: relative;
-		font-size: 26px;
-		text-align: center;
-		border-bottom: 5px solid #f6f6f6;
+  .heading {
+    position: relative;
+    font-size: 26px;
+    text-align: center;
+    border-bottom: 5px solid #f6f6f6;
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: -5px;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 70px;
-			height: 5px;
-			background-color: #387ccc;
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 5px;
+      background-color: #387ccc;
+    }
+  }
 </style>

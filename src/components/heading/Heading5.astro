@@ -5,30 +5,30 @@
 <h2 class="heading" data-en="Recruit">大文字英字と斜め線の見出しデザイン</h2>
 
 <style lang="scss">
-	.heading {
-		position: relative;
-		padding-bottom: 50px;
-		font-size: 26px;
-		text-align: center;
+  .heading {
+    position: relative;
+    padding-bottom: 50px;
+    font-size: 26px;
+    text-align: center;
 
-		&::before {
-			content: attr(data-en);
-			display: block;
-			color: #e04272;
-			font-size: 20px;
-			font-style: italic;
-			text-transform: uppercase;
-		}
+    &::before {
+      content: attr(data-en);
+      display: block;
+      color: #e04272;
+      font-size: 20px;
+      font-style: italic;
+      text-transform: uppercase;
+    }
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translate(-50%) rotate(30deg);
-			width: 1px;
-			height: 40px;
-			background-color: #e04272;
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%) rotate(30deg);
+      width: 1px;
+      height: 40px;
+      background-color: #e04272;
+    }
+  }
 </style>

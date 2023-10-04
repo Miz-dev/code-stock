@@ -1,58 +1,57 @@
 ---
 
 ---
+
 <span class="textlink">
-	<a href="#" target=_blank>リンクテキスト</a>
+  <a href="#" target="_blank">リンクテキスト</a>
 </span>
 
-
 <style lang="scss">
-	.textlink  {
-		a {
-			position: relative;
-			color: #777;
-			font-size: 15px;
-			line-height: 1.4666666667;
-			letter-spacing: 0.08em;
-			font-weight: bold;
-			text-decoration: none;
-			padding-right: 50px;
-			transition: all 0.3s ease;
+  .textlink {
+    a {
+      position: relative;
+      color: #777;
+      font-size: 15px;
+      line-height: 1.4666666667;
+      letter-spacing: 0.08em;
+      font-weight: bold;
+      text-decoration: none;
+      padding-right: 50px;
+      transition: all 0.3s ease;
 
-			&:hover {
-				color: #274a78;
+      &:hover {
+        color: #274a78;
 
-				&::before {
-					background-color: #274a78;
-				}
+        &::before {
+          background-color: #274a78;
+        }
 
-				&::after {
-					background-color: #274a78;
-				}
-			}
+        &::after {
+          background-color: #274a78;
+        }
+      }
 
-			&::before {
-				content: '';
-				position: absolute;
-				top: calc(50% - 4px);
-				right: 0;
-				transform: rotate(30deg);
-				width: 12px;
-				height: 1px;
-				background-color: #777;
-			}
+      &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 4px);
+        right: 0;
+        transform: rotate(30deg);
+        width: 12px;
+        height: 1px;
+        background-color: #777;
+      }
 
-			&::after {
-				content: '';
-				position: absolute;
-				top: 50%;
-				right: 0;
-				transform: translateY(-50%);
-				width: 40px;
-				height: 1px;
-				background-color: #777;
-			}
-
-		}
-	}
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 1px;
+        background-color: #777;
+      }
+    }
+  }
 </style>

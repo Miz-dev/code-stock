@@ -1,45 +1,45 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import Link1 from '../components/link/Link1.astro'
-import Link2 from '../components/link/Link2.astro'
-import Link3 from '../components/link/Link3.astro'
-import Link4 from '../components/link/Link4.astro'
-import Link5 from '../components/link/Link5.astro'
-import Link6 from '../components/link/Link6.astro'
+import Link1 from "../components/link/Link1.astro";
+import Link2 from "../components/link/Link2.astro";
+import Link3 from "../components/link/Link3.astro";
+import Link4 from "../components/link/Link4.astro";
+import Link5 from "../components/link/Link5.astro";
+import Link6 from "../components/link/Link6.astro";
 ---
 
 <Layout title="Link | Code Stock">
-	<main>
-		<h1><span class="text-gradient">Link</span></h1>
-		<ul>
-			<li>
-				<Link1>
-			</li>
-			<li>
-				<Link2>
-			</li>
-			<li>
-				<Link3>
-			</li>
-			<li>
-				<Link4>
-			</li>
-			<li>
-				<Link5>
-			</li>
-			<li>
-				<Link6>
-			</li>
-		</ul>
-	</main>
-</Layout>
+  <main>
+    <h1><span class="text-gradient">Link</span></h1>
+    <ul>
+      <li>
+        <Link1 />
+        <li>
+          <Link2 />
+          <li>
+            <Link3 />
+            <li>
+              <Link4 />
+              <li>
+                <Link5 />
+                <li>
+                  <Link6 />
+                </li>
+              </li>
+            </li>
 
-<style lang="scss">
-	ul {
-		list-style: none;
-		display: flex;
-		flex-direction: column;
-		row-gap: 12px;
-	}
-</style>
+            <style lang="scss">
+              ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+              }
+            </style>
+          </li>
+        </li>
+      </li>
+    </ul>
+  </main>
+</Layout>

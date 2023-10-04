@@ -1,84 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Modal | Code Stock">
-	<main>
-		<h1><span class="text-gradient">Modal</span></h1>
-		<button id="open-modal" type="button">Open modal</button>
+  <main>
+    <h1><span class="text-gradient">Modal</span></h1>
+    <button id="open-modal" type="button">Open modal</button>
 
-		<dialog id="modal">
-			<h3 class="modal-header">modal dialog</h3>
-			<div class="modal-body">
-				<p>テキストテキストテキスト</p>
-			</div>
-			<button id="close" class="close" type="button">&times;</button>
-		</dialog>
-	</main>
+    <dialog id="modal">
+      <h3 class="modal-header">modal dialog</h3>
+      <div class="modal-body">
+        <p>テキストテキストテキスト</p>
+      </div>
+      <button id="close" class="close" type="button">&times;</button>
+    </dialog>
+  </main>
 </Layout>
 
 <script>
-	const modal = document.getElementById('modal');
-	const open = document.getElementById('open-modal');
-	const close = document.getElementById('close');
+  const modal = document.getElementById("modal");
+  const open = document.getElementById("open-modal");
+  const close = document.getElementById("close");
 
-	open.addEventListener('click', () => {
-		modal.showModal();
-	});
+  open.addEventListener("click", () => {
+    modal.showModal();
+  });
 
-	close.addEventListener('click', () => {
-		modal.close('cancelled');
-	});
+  close.addEventListener("click", () => {
+    modal.close("cancelled");
+  });
 
-	modal.addEventListener('cancel', () => {
-		modal.close('cancelled');
-	});
+  modal.addEventListener("cancel", () => {
+    modal.close("cancelled");
+  });
 
-	modal.addEventListener('click', (event) => {
-		if (event.target === modal) {
-			modal.close('cancelled');
-		}
-	});
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.close("cancelled");
+    }
+  });
 </script>
 
 <style lang="scss">
-	dialog {
-		padding: 20px;
-		margin: auto;
-		border: 0;
-		border-radius: 8px;
-	}
+  dialog {
+    padding: 20px;
+    margin: auto;
+    border: 0;
+    border-radius: 8px;
+  }
 
-	/* native backdrop */
-	dialog::backdrop {
-		background-color: rgba(0, 0, 0, 0.4);
-	}
+  /* native backdrop */
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 
-	dialog[open] {
-		animation: slide-up 0.4s ease-out;
-	}
+  dialog[open] {
+    animation: slide-up 0.4s ease-out;
+  }
 
-	/* prettying things up a bit */
-	.close {
-		position: absolute;
-		top: 0.2em;
-		right: 0.2em;
-		padding: 0.3em;
-		line-height: 0.6;
-		background-color: transparent;
-		border: 0;
-		font-size: 2em;
-		cursor: pointer;
-	}
+  /* prettying things up a bit */
+  .close {
+    position: absolute;
+    top: 0.2em;
+    right: 0.2em;
+    padding: 0.3em;
+    line-height: 0.6;
+    background-color: transparent;
+    border: 0;
+    font-size: 2em;
+    cursor: pointer;
+  }
 
-	.modal-header {
-		margin: 0;
-	}
+  .modal-header {
+    margin: 0;
+  }
 
-	.modal-body {
-	}
+  .modal-body {
+  }
 
-	button {
-		cursor: pointer;
-	}
+  button {
+    cursor: pointer;
+  }
 </style>

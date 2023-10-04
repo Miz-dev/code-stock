@@ -2,23 +2,22 @@
 
 ---
 
-<h2 class="heading">短い下線とCSS見出しデザイン
-</h2>
+<h2 class="heading">短い下線とCSS見出しデザイン</h2>
 
 <style lang="scss">
-	.heading {
-		position: relative;
-		padding-bottom: 20px;
-		font-size: 26px;
+  .heading {
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 26px;
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 50px;
-			height: 4px;
-			background-color: #b99b00;
-		}
-	}
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background-color: #b99b00;
+    }
+  }
 </style>
